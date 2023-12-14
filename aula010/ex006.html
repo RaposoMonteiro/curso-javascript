@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container" id="container">
+
+        Interaja...
+
+    </div>
+
+    <script>
+        
+        var container = window.document.getElementById('container')
+
+        container.addEventListener('click', clicar)
+        container.addEventListener('mouseenter', entrar)
+        container.addEventListener('mouseout', sair)
+
+        function clicar(){
+            container.innerText = 'Clicou'
+            container.style.background = 'red'
+        }
+
+        function entrar(){
+            container.innerText = 'Entrou'
+            container.style.background = 'blueviolet'
+        }
+
+        function sair(){
+            container.innerText = 'Saiu'
+            container.style.background = 'green'
+        }
+
+    </script>
+</body>
+</html>
